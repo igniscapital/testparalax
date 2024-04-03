@@ -280,8 +280,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__vl0Hc,
-                      "continue w-button"
+                      sty.text__vl0Hc
                     )}
                   >
                     {"click Here to continue"}
@@ -894,7 +893,7 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.embedHtml}
               className={classNames("__wab_instance", sty.embedHtml)}
               code={
-                '// Ensure the script runs after the DOM has loaded\n<script>\ndocument.addEventListener(\'DOMContentLoaded\', function() {\n\n  // Get a reference to the button element using its class\n  var startButton = document.querySelector(".continue.w-button");\n\n  // Add a click event listener to the button\n  startButton.addEventListener("click", function(event) {\n    event.preventDefault(); // prevent any default action of the anchor tag\n\n    // Create an audio element\n    var audio = new Audio("https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3");\n\n    // Enable looping for the audio, if desired\n    audio.loop = true;\n\n    // Play the audio file\n    audio.play();\n  });\n\n});\n</script>'
+                "\n<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n\n\n    // Create an audio element\n    var audio = new Audio(\"https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3\");\n\n    // Play the audio file\n    audio.play();\n  });\n\n});\n</script>"
               }
             />
 
