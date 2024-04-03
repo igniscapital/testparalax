@@ -232,7 +232,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__qbxhl
+                    sty.link__qbxhl,
+                    "continue"
                   )}
                   component={Link}
                   onClick={async event => {
@@ -281,7 +282,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       projectcss.all,
                       projectcss.__wab_text,
                       sty.text__vl0Hc,
-                      "continue"
+                      ``
                     )}
                   >
                     {"click Here to continue"}
