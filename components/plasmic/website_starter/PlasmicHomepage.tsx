@@ -233,7 +233,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     sty.link__qbxhl,
-                    "continue"
+                    "continue w-button"
                   )}
                   component={Link}
                   onClick={async event => {
