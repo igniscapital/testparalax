@@ -79,7 +79,10 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  hero?: Flex__<"section">;
   scrollParallax?: Flex__<typeof ParallaxWrapper>;
+  freeBox?: Flex__<"div">;
+  section?: Flex__<"section">;
 };
 
 export interface DefaultHomepageProps {}
@@ -140,7 +143,11 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <section className={classNames(projectcss.all, sty.section__yrkDa)}>
+          <section
+            data-plasmic-name={"hero"}
+            data-plasmic-override={overrides.hero}
+            className={classNames(projectcss.all, sty.hero)}
+          >
             <PlasmicImg__
               alt={""}
               className={classNames(sty.img__y3TZh)}
@@ -200,26 +207,56 @@ function PlasmicHomepage__RenderFunc(props: {
                 aspectRatio: undefined
               }}
             />
+
+            <Stack__
+              as={"div"}
+              data-plasmic-name={"freeBox"}
+              data-plasmic-override={overrides.freeBox}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__edKq9)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"800px"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/website_starter/images/websiteTitle1Png.png",
+                  fullWidth: 1880,
+                  fullHeight: 430,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__ynCRh)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"300px"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/website_starter/images/squirtieSurfinggif.gif",
+                  fullWidth: 550,
+                  fullHeight: 440,
+                  aspectRatio: undefined
+                }}
+              />
+            </Stack__>
           </section>
-          <section className={classNames(projectcss.all, sty.section__nyb78)}>
-            <PlasmicImg__
-              alt={""}
-              className={classNames(sty.img__bamLa)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"100%"}
-              loading={"lazy"}
-              src={{
-                src: "/plasmic/website_starter/images/squirtieMainbannerSkypng.png",
-                fullWidth: 1920,
-                fullHeight: 1080,
-                aspectRatio: undefined
-              }}
-            />
-          </section>
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -227,15 +264,21 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "scrollParallax"],
-  scrollParallax: ["scrollParallax"]
+  root: ["root", "hero", "scrollParallax", "freeBox", "section"],
+  hero: ["hero", "scrollParallax", "freeBox"],
+  scrollParallax: ["scrollParallax"],
+  freeBox: ["freeBox"],
+  section: ["section"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  hero: "section";
   scrollParallax: typeof ParallaxWrapper;
+  freeBox: "div";
+  section: "section";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -298,7 +341,10 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    hero: makeNodeComponent("hero"),
     scrollParallax: makeNodeComponent("scrollParallax"),
+    freeBox: makeNodeComponent("freeBox"),
+    section: makeNodeComponent("section"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

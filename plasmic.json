@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -47,7 +47,8 @@
           "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "61gETVAv9Y5XUyzBBiKaE2",
@@ -87,6 +88,16 @@
           "id": "Aj-FSHe61rXS",
           "name": "squirtie_mainbanner.png",
           "filePath": "../public/plasmic/website_starter/images/squirtieMainbannerpng.png"
+        },
+        {
+          "id": "UFHX5xnjUJmx",
+          "name": "website_title (1).png",
+          "filePath": "../public/plasmic/website_starter/images/websiteTitle1Png.png"
+        },
+        {
+          "id": "xmYxPFsSZbEo",
+          "name": "squirtie_surfing.gif",
+          "filePath": "../public/plasmic/website_starter/images/squirtieSurfinggif.gif"
         }
       ],
       "indirect": false,
