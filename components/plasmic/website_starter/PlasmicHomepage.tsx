@@ -273,6 +273,38 @@ function PlasmicHomepage__RenderFunc(props: {
                         "updateDialogOpen"
                       ];
                     }
+
+                    $steps["updateDialogOpen2"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                return document.addEventListener(
+                                  "click",
+                                  () => {
+                                    const audio = new Audio(
+                                      "https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3"
+                                    );
+                                    audio.play();
+                                  }
+                                );
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateDialogOpen2"] != null &&
+                      typeof $steps["updateDialogOpen2"] === "object" &&
+                      typeof $steps["updateDialogOpen2"].then === "function"
+                    ) {
+                      $steps["updateDialogOpen2"] = await $steps[
+                        "updateDialogOpen2"
+                      ];
+                    }
                   }}
                   platform={"nextjs"}
                 >
@@ -892,9 +924,7 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-name={"embedHtml"}
               data-plasmic-override={overrides.embedHtml}
               className={classNames("__wab_instance", sty.embedHtml)}
-              code={
-                '\n<audio id="myAudio" controls autoplay>\n  <source src="https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3" type="audio/mpeg">\n</audio>'
-              }
+              code={""}
             />
 
             <h5
