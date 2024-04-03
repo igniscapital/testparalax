@@ -59,6 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { PlasmicHead } from "@plasmicapp/react-web";
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 
@@ -82,6 +83,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  pageMetadataOverride?: Flex__<typeof PlasmicHead>;
   navbar?: Flex__<"div">;
   hero?: Flex__<"section">;
   scrollParallax?: Flex__<typeof ParallaxWrapper>;
@@ -154,6 +156,19 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <PlasmicHead
+            data-plasmic-name={"pageMetadataOverride"}
+            data-plasmic-override={overrides.pageMetadataOverride}
+            className={classNames("__wab_instance", sty.pageMetadataOverride)}
+            description={
+              "Legend has it that Squirtie was born under a brilliant star, destined for greatness from the moment he emerged from his eggshell. Raised among the gentle waves of the Cerulean Sea, Squirtie was quickly recognized for his indomitable spirit and adventurous nature."
+            }
+            image={
+              "/plasmic/website_starter/images/squirtieCoinTransparentpng.png"
+            }
+            title={"SquirtieBASE"}
+          />
+
           <div
             data-plasmic-name={"navbar"}
             data-plasmic-override={overrides.navbar}
@@ -185,7 +200,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__gk6Rm
                 )}
                 component={Link}
-                href={"https://www.plasmic.app/"}
+                href={"#lore"}
                 platform={"nextjs"}
               >
                 {"Lore"}
@@ -198,7 +213,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__g0Jvq
                 )}
                 component={Link}
-                href={"https://www.plasmic.app/"}
+                href={"#tokenomics"}
                 platform={"nextjs"}
               >
                 {"Tokenomics"}
@@ -211,7 +226,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__qopnm
                 )}
                 component={Link}
-                href={"https://www.plasmic.app/"}
+                href={"#roadmap"}
                 platform={"nextjs"}
               >
                 {"Roadmap"}
@@ -341,6 +356,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"lore"}
             data-plasmic-override={overrides.lore}
             className={classNames(projectcss.all, sty.lore)}
+            id={"lore"}
           >
             <div className={classNames(projectcss.all, sty.freeBox__p2E1S)}>
               <Reveal
@@ -515,6 +531,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"tokenomics"}
             data-plasmic-override={overrides.tokenomics}
             className={classNames(projectcss.all, sty.tokenomics)}
+            id={"tokenomics"}
           >
             <div className={classNames(projectcss.all, sty.freeBox__if8FL)}>
               <div className={classNames(projectcss.all, sty.freeBox__nflNu)}>
@@ -610,6 +627,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"section"}
             data-plasmic-override={overrides.section}
             className={classNames(projectcss.all, sty.section)}
+            id={"roadmap"}
           >
             <PlasmicImg__
               alt={""}
@@ -811,6 +829,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "pageMetadataOverride",
     "navbar",
     "hero",
     "scrollParallax",
@@ -820,6 +839,7 @@ const PlasmicDescendants = {
     "h3",
     "section"
   ],
+  pageMetadataOverride: ["pageMetadataOverride"],
   navbar: ["navbar"],
   hero: ["hero", "scrollParallax"],
   scrollParallax: ["scrollParallax"],
@@ -834,6 +854,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  pageMetadataOverride: typeof PlasmicHead;
   navbar: "div";
   hero: "section";
   scrollParallax: typeof ParallaxWrapper;
@@ -904,6 +925,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    pageMetadataOverride: makeNodeComponent("pageMetadataOverride"),
     navbar: makeNodeComponent("navbar"),
     hero: makeNodeComponent("hero"),
     scrollParallax: makeNodeComponent("scrollParallax"),
