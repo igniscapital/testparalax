@@ -7,18 +7,22 @@
 import * as React from "react";
 import { hasVariant, ensureGlobalVariants } from "@plasmicapp/react-web";
 import { ParallaxProviderWrapper } from "@plasmicpkgs/react-scroll-parallax";
+import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
   parallaxProviderWrapperProps?: Partial<
     Omit<React.ComponentProps<typeof ParallaxProviderWrapper>, "children">
   >;
+  embedCssProps?: Partial<
+    Omit<React.ComponentProps<typeof EmbedCss>, "children">
+  >;
 }
 
 export default function GlobalContextsProvider(
   props: GlobalContextsProviderProps
 ) {
-  const { children, parallaxProviderWrapperProps } = props;
+  const { children, parallaxProviderWrapperProps, embedCssProps } = props;
 
   return (
     <ParallaxProviderWrapper
@@ -30,7 +34,16 @@ export default function GlobalContextsProvider(
           : "vertical"
       }
     >
-      {children}
+      <EmbedCss
+        {...embedCssProps}
+        css={
+          embedCssProps && "css" in embedCssProps
+            ? embedCssProps.css!
+            : "/* CSS snippet */\n@font-face {\n  font-family: 'upheavt';\n  src: url('https://site-assets.plasmic.app/2d6cbf09dd8de35e87023982d4501027.ttf');\n}\n@font-face {\n  font-family: 'pixellari';\n  src: url('https://site-assets.plasmic.app/496f5330d2c390d6487c296d2c550426.ttf');\n}"
+        }
+      >
+        {children}
+      </EmbedCss>
     </ParallaxProviderWrapper>
   );
 }

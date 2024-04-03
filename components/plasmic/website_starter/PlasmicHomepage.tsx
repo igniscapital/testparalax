@@ -61,6 +61,8 @@ import {
 
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 
+import { useScreenVariants as useScreenVariantsr2Vs3DyXq1BQ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: r2VS3DyXq1bQ/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: 61gETVAv9Y5XUyzBBiKaE2/projectcss
@@ -79,10 +81,11 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  navbar?: Flex__<"div">;
   hero?: Flex__<"section">;
   scrollParallax?: Flex__<typeof ParallaxWrapper>;
-  freeBox?: Flex__<"div">;
   section?: Flex__<"section">;
+  text?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -118,6 +121,10 @@ function PlasmicHomepage__RenderFunc(props: {
 
   const currentUser = useCurrentUser?.() || {};
 
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsr2Vs3DyXq1BQ()
+  });
+
   return (
     <React.Fragment>
       <Head></Head>
@@ -143,6 +150,70 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <div
+            data-plasmic-name={"navbar"}
+            data-plasmic-override={overrides.navbar}
+            className={classNames(projectcss.all, sty.navbar)}
+          >
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__baFf6)}
+            >
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  projectcss.__wab_text,
+                  sty.link__rztov
+                )}
+                component={Link}
+                href={"https://www.plasmic.app/"}
+                platform={"nextjs"}
+              >
+                {"Home"}
+              </PlasmicLink__>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  projectcss.__wab_text,
+                  sty.link__gk6Rm
+                )}
+                component={Link}
+                href={"https://www.plasmic.app/"}
+                platform={"nextjs"}
+              >
+                {"Lore"}
+              </PlasmicLink__>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  projectcss.__wab_text,
+                  sty.link__g0Jvq
+                )}
+                component={Link}
+                href={"https://www.plasmic.app/"}
+                platform={"nextjs"}
+              >
+                {"Tokenomics"}
+              </PlasmicLink__>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  projectcss.__wab_text,
+                  sty.link__qopnm
+                )}
+                component={Link}
+                href={"https://www.plasmic.app/"}
+                platform={"nextjs"}
+              >
+                {"Roadmap"}
+              </PlasmicLink__>
+            </Stack__>
+          </div>
           <section
             data-plasmic-name={"hero"}
             data-plasmic-override={overrides.hero}
@@ -151,7 +222,11 @@ function PlasmicHomepage__RenderFunc(props: {
             <PlasmicImg__
               alt={""}
               className={classNames(sty.img__y3TZh)}
-              displayHeight={"auto"}
+              displayHeight={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "600px"
+                  : "auto"
+              }
               displayMaxHeight={"none"}
               displayMaxWidth={"100%"}
               displayMinHeight={"0"}
@@ -193,7 +268,11 @@ function PlasmicHomepage__RenderFunc(props: {
             <PlasmicImg__
               alt={""}
               className={classNames(sty.img__u122E)}
-              displayHeight={"auto"}
+              displayHeight={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "600px"
+                  : "auto"
+              }
               displayMaxHeight={"none"}
               displayMaxWidth={"100%"}
               displayMinHeight={"0"}
@@ -210,10 +289,8 @@ function PlasmicHomepage__RenderFunc(props: {
 
             <Stack__
               as={"div"}
-              data-plasmic-name={"freeBox"}
-              data-plasmic-override={overrides.freeBox}
               hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox)}
+              className={classNames(projectcss.all, sty.freeBox__gSFjl)}
             >
               <PlasmicImg__
                 alt={""}
@@ -241,7 +318,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"300px"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "250px"
+                    : "300px"
+                }
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/website_starter/images/squirtieSurfinggif.gif",
@@ -256,7 +337,19 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"section"}
             data-plasmic-override={overrides.section}
             className={classNames(projectcss.all, sty.section)}
-          />
+          >
+            <div
+              data-plasmic-name={"text"}
+              data-plasmic-override={overrides.text}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text
+              )}
+            >
+              {"Enter some text"}
+            </div>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -264,21 +357,23 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "hero", "scrollParallax", "freeBox", "section"],
-  hero: ["hero", "scrollParallax", "freeBox"],
+  root: ["root", "navbar", "hero", "scrollParallax", "section", "text"],
+  navbar: ["navbar"],
+  hero: ["hero", "scrollParallax"],
   scrollParallax: ["scrollParallax"],
-  freeBox: ["freeBox"],
-  section: ["section"]
+  section: ["section", "text"],
+  text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  navbar: "div";
   hero: "section";
   scrollParallax: typeof ParallaxWrapper;
-  freeBox: "div";
   section: "section";
+  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -341,10 +436,11 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    navbar: makeNodeComponent("navbar"),
     hero: makeNodeComponent("hero"),
     scrollParallax: makeNodeComponent("scrollParallax"),
-    freeBox: makeNodeComponent("freeBox"),
     section: makeNodeComponent("section"),
+    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
