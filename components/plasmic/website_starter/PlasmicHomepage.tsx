@@ -549,9 +549,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"100%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/squirtle/images/websiteWreckage1Gif2.gif",
+                    src: "/plasmic/squirtle/images/websiteWreckage1Gif4.gif",
                     fullWidth: 1920,
-                    fullHeight: 950,
+                    fullHeight: 1068,
                     aspectRatio: undefined
                   }}
                 />
@@ -576,9 +576,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"100%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/squirtle/images/websiteWreckage2Gif.gif",
+                    src: "/plasmic/squirtle/images/websiteWreckage2Gif3.gif",
                     fullWidth: 1920,
-                    fullHeight: 950,
+                    fullHeight: 1068,
                     aspectRatio: undefined
                   }}
                 />
@@ -603,9 +603,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"100%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/squirtle/images/websiteWreckage3Gif.gif",
+                    src: "/plasmic/squirtle/images/websiteWreckage3Gif3.gif",
                     fullWidth: 1920,
-                    fullHeight: 950,
+                    fullHeight: 1068,
                     aspectRatio: undefined
                   }}
                 />
@@ -624,9 +624,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"100%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/squirtle/images/websiteWreckage4Gif.gif",
+                    src: "/plasmic/squirtle/images/websiteWreckage41Gif.gif",
                     fullWidth: 1920,
-                    fullHeight: 950,
+                    fullHeight: 1068,
                     aspectRatio: undefined
                   }}
                 />
