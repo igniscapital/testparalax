@@ -280,8 +280,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__vl0Hc,
-                      "continue w-button"
+                      sty.text__vl0Hc
                     )}
                   >
                     {"click Here to continue"}
@@ -894,7 +893,7 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.embedHtml}
               className={classNames("__wab_instance", sty.embedHtml)}
               code={
-                "\n<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n\n    // Create an audio element\n    var audio = new Audio(\"https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3\");\n\n    // Enable looping for the audio, if desired\n    audio.loop = true;\n\n    // Play the audio file\n    audio.play();\n  });\n\n});\n\n</script>"
+                '\n<audio id="myAudio" controls autoplay>\n  <source src="https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3" type="audio/mpeg">\n</audio>'
               }
             />
 
