@@ -142,7 +142,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "dialog.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -581,12 +581,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__a5P50)}
-                    displayHeight={"300px"}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "250px"
+                        : "300px"
+                    }
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
                     displayMinHeight={"0"}
                     displayMinWidth={"0"}
-                    displayWidth={"300px"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "250px"
+                        : "300px"
+                    }
                     loading={"lazy"}
                     src={{
                       src: "/plasmic/website_starter/images/squirtieHatchgif.gif",
@@ -634,12 +642,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__pAvP)}
-                    displayHeight={"300px"}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "250px"
+                        : "300px"
+                    }
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
                     displayMinHeight={"0"}
                     displayMinWidth={"0"}
-                    displayWidth={"300px"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "250px"
+                        : "300px"
+                    }
                     loading={"lazy"}
                     src={{
                       src: "/plasmic/website_starter/images/squirtieSquadgif.gif",
@@ -664,12 +680,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__wucKg)}
-                    displayHeight={"300px"}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "250px"
+                        : "300px"
+                    }
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
                     displayMinHeight={"0"}
                     displayMinWidth={"0"}
-                    displayWidth={"300px"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "250px"
+                        : "300px"
+                    }
                     loading={"lazy"}
                     src={{
                       src: "/plasmic/website_starter/images/squirtieFarewellgif.gif",
@@ -717,12 +741,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__yu1Bi)}
-                    displayHeight={"300px"}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "250px"
+                        : "300px"
+                    }
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
                     displayMinHeight={"0"}
                     displayMinWidth={"0"}
-                    displayWidth={"300px"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "250px"
+                        : "300px"
+                    }
                     loading={"lazy"}
                     src={{
                       src: "/plasmic/website_starter/images/squirtieSurfgif.gif",
