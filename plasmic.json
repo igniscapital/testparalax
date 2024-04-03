@@ -216,6 +216,26 @@
           "id": "9LsyZwPh-kK6",
           "name": "website_title.png",
           "filePath": "../public/plasmic/squirtle/images/websiteTitlepng.png"
+        },
+        {
+          "id": "H1YzDqrjHBql",
+          "name": "website_wreckage4.gif",
+          "filePath": "../public/plasmic/squirtle/images/websiteWreckage4Gif.gif"
+        },
+        {
+          "id": "1xcx3A-f7kSn",
+          "name": "website_roadmap (1).png",
+          "filePath": "../public/plasmic/squirtle/images/websiteRoadmap1Png.png"
+        },
+        {
+          "id": "TgHa8QE2yolh",
+          "name": "website_telegram-brown.png",
+          "filePath": "../public/plasmic/squirtle/images/websiteTelegramBrownpng.png"
+        },
+        {
+          "id": "2gJ-VWeFWi_E",
+          "name": "website_twitter-brown.png",
+          "filePath": "../public/plasmic/squirtle/images/websiteTwitterBrownpng.png"
         }
       ],
       "indirect": false,
