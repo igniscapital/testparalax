@@ -28,6 +28,7 @@
 .dialog:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
   position: relative;
+  z-index: 101;
 }
 .text___8T7Lx {
   position: relative;
@@ -149,11 +150,11 @@
   background: none;
   left: 0;
   top: 0;
-  z-index: 1;
-  right: 0;
+  z-index: 50;
   margin-top: 24px;
   margin-bottom: 0px;
   justify-self: flex-start;
+  right: 0;
   min-width: 0;
   padding: 8px;
 }
@@ -165,7 +166,6 @@
   height: auto;
   max-width: 100%;
   background: #1d3394;
-  z-index: 100;
   border-radius: 12px;
   padding: 8px 24px;
   border: 10px solid #18276b;
