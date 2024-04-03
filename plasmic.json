@@ -236,6 +236,21 @@
           "id": "2gJ-VWeFWi_E",
           "name": "website_twitter-brown.png",
           "filePath": "../public/plasmic/squirtle/images/websiteTwitterBrownpng.png"
+        },
+        {
+          "id": "OCMdLL2TuOBe",
+          "name": "website_wreckage1.gif 2",
+          "filePath": "../public/plasmic/squirtle/images/websiteWreckage1Gif2.gif"
+        },
+        {
+          "id": "-cYoJMGFIhTM",
+          "name": "website_wreckage2.gif",
+          "filePath": "../public/plasmic/squirtle/images/websiteWreckage2Gif.gif"
+        },
+        {
+          "id": "wd8WD-QMextZ",
+          "name": "website_wreckage3.gif",
+          "filePath": "../public/plasmic/squirtle/images/websiteWreckage3Gif.gif"
         }
       ],
       "indirect": false,
