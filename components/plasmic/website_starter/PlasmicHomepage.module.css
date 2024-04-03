@@ -1100,6 +1100,7 @@
   height: auto;
   max-width: 100%;
   margin-top: 62px;
+  margin-bottom: 62px;
   padding: 8px;
 }
 .freeBox__d5Yp0 > :global(.__wab_flex-container) {
@@ -1140,6 +1141,11 @@
 }
 .img__gdaK > picture > img {
   object-fit: cover;
+}
+.embedHtml:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
 }
 .dialog:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
@@ -1228,9 +1234,4 @@
   max-width: 100%;
   font-family: "upheavt";
   min-width: 0;
-}
-.embedHtml:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  position: relative;
 }

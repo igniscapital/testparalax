@@ -62,9 +62,9 @@ import {
 import { PlasmicHead } from "@plasmicapp/react-web";
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import Dialog from "../../Dialog"; // plasmic-import: 1DFDKTDshbFk/component
 import Button from "../../Button"; // plasmic-import: d_zUYhXcO1JF/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 
 import { useScreenVariants as useScreenVariantsr2Vs3DyXq1BQ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: r2VS3DyXq1bQ/globalVariant
 
@@ -98,8 +98,8 @@ export type PlasmicHomepage__OverridesType = {
   columns?: Flex__<"div">;
   h3?: Flex__<"h3">;
   section?: Flex__<"section">;
-  dialog?: Flex__<typeof Dialog>;
   embedHtml?: Flex__<typeof Embed>;
+  dialog?: Flex__<typeof Dialog>;
 };
 
 export interface DefaultHomepageProps {}
@@ -849,6 +849,14 @@ function PlasmicHomepage__RenderFunc(props: {
                 </PlasmicLink__>
               </Stack__>
             </div>
+            <Embed
+              data-plasmic-name={"embedHtml"}
+              data-plasmic-override={overrides.embedHtml}
+              className={classNames("__wab_instance", sty.embedHtml)}
+              code={
+                '<audio controls autoplay>\n  <source src="https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3" type="audio/mpeg">\n</audio>'
+              }
+            />
           </section>
           <Dialog
             data-plasmic-name={"dialog"}
@@ -960,15 +968,6 @@ function PlasmicHomepage__RenderFunc(props: {
             onOpenChange={generateStateOnChangeProp($state, ["dialog", "open"])}
             open={generateStateValueProp($state, ["dialog", "open"])}
           />
-
-          <Embed
-            data-plasmic-name={"embedHtml"}
-            data-plasmic-override={overrides.embedHtml}
-            className={classNames("__wab_instance", sty.embedHtml)}
-            code={
-              '\n\n<audio autoplay>\n  <source src="https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3" type="audio/mpeg">\n</audio>'
-            }
-          />
         </div>
       </div>
     </React.Fragment>
@@ -987,8 +986,8 @@ const PlasmicDescendants = {
     "columns",
     "h3",
     "section",
-    "dialog",
-    "embedHtml"
+    "embedHtml",
+    "dialog"
   ],
   pageMetadataOverride: ["pageMetadataOverride"],
   navbar: ["navbar"],
@@ -998,9 +997,9 @@ const PlasmicDescendants = {
   tokenomics: ["tokenomics", "columns", "h3"],
   columns: ["columns", "h3"],
   h3: ["h3"],
-  section: ["section"],
-  dialog: ["dialog"],
-  embedHtml: ["embedHtml"]
+  section: ["section", "embedHtml"],
+  embedHtml: ["embedHtml"],
+  dialog: ["dialog"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1016,8 +1015,8 @@ type NodeDefaultElementType = {
   columns: "div";
   h3: "h3";
   section: "section";
-  dialog: typeof Dialog;
   embedHtml: typeof Embed;
+  dialog: typeof Dialog;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1089,8 +1088,8 @@ export const PlasmicHomepage = Object.assign(
     columns: makeNodeComponent("columns"),
     h3: makeNodeComponent("h3"),
     section: makeNodeComponent("section"),
-    dialog: makeNodeComponent("dialog"),
     embedHtml: makeNodeComponent("embedHtml"),
+    dialog: makeNodeComponent("dialog"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
