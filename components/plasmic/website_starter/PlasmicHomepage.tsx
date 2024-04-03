@@ -280,7 +280,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__vl0Hc
+                      sty.text__vl0Hc,
+                      "continue"
                     )}
                   >
                     {"click Here to continue"}
