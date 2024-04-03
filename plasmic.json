@@ -123,6 +123,51 @@
           "id": "_SQVC_MShnQd",
           "name": "squirtie_surf.gif",
           "filePath": "../public/plasmic/website_starter/images/squirtieSurfgif.gif"
+        },
+        {
+          "id": "zGj3sWBYNwNy",
+          "name": "website_separator (1).png",
+          "filePath": "../public/plasmic/website_starter/images/websiteSeparator1Png.png"
+        },
+        {
+          "id": "T6xDb3HPvSJV",
+          "name": "squirtie_coinspin.gif",
+          "filePath": "../public/plasmic/website_starter/images/squirtieCoinspingif.gif"
+        },
+        {
+          "id": "Iml3UfsyZWDM",
+          "name": "island 1.png",
+          "filePath": "../public/plasmic/website_starter/images/island1Png.png"
+        },
+        {
+          "id": "uGcnt5cj-6Ur",
+          "name": "island 2.png",
+          "filePath": "../public/plasmic/website_starter/images/island2Png.png"
+        },
+        {
+          "id": "cCok9DjE4-Y2",
+          "name": "island 4.png",
+          "filePath": "../public/plasmic/website_starter/images/island4Png.png"
+        },
+        {
+          "id": "45sS61CtcK9c",
+          "name": "island 3.png",
+          "filePath": "../public/plasmic/website_starter/images/island3Png.png"
+        },
+        {
+          "id": "ZPWdSTIuEArk",
+          "name": "website_telegram.png",
+          "filePath": "../public/plasmic/website_starter/images/websiteTelegrampng.png"
+        },
+        {
+          "id": "WRGpvKQAmI7g",
+          "name": "website_twitter.png",
+          "filePath": "../public/plasmic/website_starter/images/websiteTwitterpng.png"
+        },
+        {
+          "id": "gjhCPMLSCUIE",
+          "name": "website_wreckage (1).gif",
+          "filePath": "../public/plasmic/website_starter/images/websiteWreckage1Gif.gif"
         }
       ],
       "indirect": false,
@@ -187,7 +232,8 @@
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {

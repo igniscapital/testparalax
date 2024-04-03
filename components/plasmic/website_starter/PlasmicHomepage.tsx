@@ -86,6 +86,10 @@ export type PlasmicHomepage__OverridesType = {
   hero?: Flex__<"section">;
   scrollParallax?: Flex__<typeof ParallaxWrapper>;
   lore?: Flex__<"section">;
+  tokenomics?: Flex__<"section">;
+  columns?: Flex__<"div">;
+  h3?: Flex__<"h3">;
+  section?: Flex__<"section">;
 };
 
 export interface DefaultHomepageProps {}
@@ -507,6 +511,297 @@ function PlasmicHomepage__RenderFunc(props: {
               </Reveal>
             </div>
           </section>
+          <section
+            data-plasmic-name={"tokenomics"}
+            data-plasmic-override={overrides.tokenomics}
+            className={classNames(projectcss.all, sty.tokenomics)}
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__if8FL)}>
+              <div className={classNames(projectcss.all, sty.freeBox__nflNu)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img___8Ng48)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/website_starter/images/websiteSeparator1Png.png",
+                    fullWidth: 1024,
+                    fullHeight: 88,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__wrruv
+                  )}
+                >
+                  {"Tokenomics"}
+                </h2>
+              </div>
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"columns"}
+                data-plasmic-override={overrides.columns}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.columns)}
+              >
+                <div className={classNames(projectcss.all, sty.column__qpion)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__qgnQi)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/website_starter/images/squirtieCoinspingif.gif",
+                      fullWidth: 880,
+                      fullHeight: 880,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.column__wPfox)}
+                >
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__s4FoI
+                    )}
+                  >
+                    {"1,000,000,000 "}
+                  </h2>
+                  <h3
+                    data-plasmic-name={"h3"}
+                    data-plasmic-override={overrides.h3}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h3,
+                      projectcss.__wab_text,
+                      sty.h3
+                    )}
+                  >
+                    {
+                      "0% Tax.\n50% LP\n50%Distribution/development\nCONTRACT ADDRESS :"
+                    }
+                  </h3>
+                </Stack__>
+              </Stack__>
+            </div>
+          </section>
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__fDSd)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"100%"}
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/website_starter/images/websiteWreckage1Gif.gif",
+                fullWidth: 3840,
+                fullHeight: 2600,
+                aspectRatio: undefined
+              }}
+            />
+
+            <div className={classNames(projectcss.all, sty.freeBox__sBUl)}>
+              <div className={classNames(projectcss.all, sty.freeBox__oPzt7)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__qo7We)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/website_starter/images/websiteSeparator1Png.png",
+                    fullWidth: 1024,
+                    fullHeight: 88,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2___3BJnn
+                  )}
+                >
+                  {"Roadmap"}
+                </h2>
+              </div>
+              <div className={classNames(projectcss.all, sty.freeBox__k4Zu)}>
+                <div className={classNames(projectcss.all, sty.freeBox__puA8O)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img___53TSl)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"300px"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/website_starter/images/island1Png.png",
+                      fullWidth: 552,
+                      fullHeight: 352,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__dNzJy)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__scFfR)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"300px"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/website_starter/images/island2Png.png",
+                      fullWidth: 552,
+                      fullHeight: 352,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___3MiCm)}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__p3Uwj)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"300px"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/website_starter/images/island4Png.png",
+                      fullWidth: 552,
+                      fullHeight: 352,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__lmBDu)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__pe7B9)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"300px"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/website_starter/images/island3Png.png",
+                      fullWidth: 552,
+                      fullHeight: 352,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+              </div>
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__d5Yp0)}
+              >
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__r0T05
+                  )}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__ruJy3)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/website_starter/images/websiteTelegrampng.png",
+                      fullWidth: 72,
+                      fullHeight: 52,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__wsxY4
+                  )}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__gdaK)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/website_starter/images/websiteTwitterpng.png",
+                      fullWidth: 72,
+                      fullHeight: 52,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </PlasmicLink__>
+              </Stack__>
+            </div>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -514,11 +809,25 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navbar", "hero", "scrollParallax", "lore"],
+  root: [
+    "root",
+    "navbar",
+    "hero",
+    "scrollParallax",
+    "lore",
+    "tokenomics",
+    "columns",
+    "h3",
+    "section"
+  ],
   navbar: ["navbar"],
   hero: ["hero", "scrollParallax"],
   scrollParallax: ["scrollParallax"],
-  lore: ["lore"]
+  lore: ["lore"],
+  tokenomics: ["tokenomics", "columns", "h3"],
+  columns: ["columns", "h3"],
+  h3: ["h3"],
+  section: ["section"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -529,6 +838,10 @@ type NodeDefaultElementType = {
   hero: "section";
   scrollParallax: typeof ParallaxWrapper;
   lore: "section";
+  tokenomics: "section";
+  columns: "div";
+  h3: "h3";
+  section: "section";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -595,6 +908,10 @@ export const PlasmicHomepage = Object.assign(
     hero: makeNodeComponent("hero"),
     scrollParallax: makeNodeComponent("scrollParallax"),
     lore: makeNodeComponent("lore"),
+    tokenomics: makeNodeComponent("tokenomics"),
+    columns: makeNodeComponent("columns"),
+    h3: makeNodeComponent("h3"),
+    section: makeNodeComponent("section"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
