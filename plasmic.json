@@ -103,6 +103,26 @@
           "id": "qiSF4jBA4j9V",
           "name": "website_header (1).png",
           "filePath": "../public/plasmic/website_starter/images/websiteHeader1Png.png"
+        },
+        {
+          "id": "Te2gcMbuaV0K",
+          "name": "squirtie_hatch.gif",
+          "filePath": "../public/plasmic/website_starter/images/squirtieHatchgif.gif"
+        },
+        {
+          "id": "UgTo_h2Gc4IV",
+          "name": "squirtie_squad.gif",
+          "filePath": "../public/plasmic/website_starter/images/squirtieSquadgif.gif"
+        },
+        {
+          "id": "By_GYTjLsp7K",
+          "name": "squirtie_farewell.gif",
+          "filePath": "../public/plasmic/website_starter/images/squirtieFarewellgif.gif"
+        },
+        {
+          "id": "_SQVC_MShnQd",
+          "name": "squirtie_surf.gif",
+          "filePath": "../public/plasmic/website_starter/images/squirtieSurfgif.gif"
         }
       ],
       "indirect": false,
@@ -142,6 +162,29 @@
           "name": "EmbedCss",
           "displayName": "global-embed-css",
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
+        }
+      ],
+      "customFunctions": [],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
+      "projectApiToken": "DIkcfhBwjMCJSjcxfBkMuy4NImyytq5EWylxVcpS9t9EpdhnPQuBgBGxmk00AB1itMFa1KXTxOKnrjN2PN9nlA",
+      "projectName": "react-awesome-reveal",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_awesome_reveal/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "R6s1FdhksG",
+          "name": "Reveal",
+          "displayName": "hostless-reveal",
+          "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
       ],
       "customFunctions": []
