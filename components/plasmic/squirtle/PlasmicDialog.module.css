@@ -41,7 +41,7 @@
 }
 .dialogContent:global(.__wab_instance) {
   box-shadow: 0px 4px 16px 0px #00000033;
-  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, #0b157d 0%, #00abff 100%);
   width: 100%;
   max-width: 100%;
   object-fit: cover;
@@ -157,6 +157,7 @@
   width: auto;
   height: auto;
   max-width: 100%;
+  color: #ffffff;
   padding: 8px;
 }
 .text__cPyR {

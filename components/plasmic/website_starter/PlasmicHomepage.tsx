@@ -59,12 +59,12 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import Dialog from "../../Dialog"; // plasmic-import: 1DFDKTDshbFk/component
+import Button from "../../Button"; // plasmic-import: d_zUYhXcO1JF/component
 import { PlasmicHead } from "@plasmicapp/react-web";
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
-import Dialog from "../../Dialog"; // plasmic-import: 1DFDKTDshbFk/component
-import Button from "../../Button"; // plasmic-import: d_zUYhXcO1JF/component
 
 import { useScreenVariants as useScreenVariantsr2Vs3DyXq1BQ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: r2VS3DyXq1bQ/globalVariant
 
@@ -89,6 +89,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  dialog?: Flex__<typeof Dialog>;
   pageMetadataOverride?: Flex__<typeof PlasmicHead>;
   navbar?: Flex__<"div">;
   hero?: Flex__<"section">;
@@ -99,7 +100,6 @@ export type PlasmicHomepage__OverridesType = {
   h3?: Flex__<"h3">;
   section?: Flex__<"section">;
   embedHtml?: Flex__<typeof Embed>;
-  dialog?: Flex__<typeof Dialog>;
 };
 
 export interface DefaultHomepageProps {}
@@ -182,6 +182,117 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <Dialog
+            data-plasmic-name={"dialog"}
+            data-plasmic-override={overrides.dialog}
+            body={
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__qEiOr)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img___0YnYr)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"400px"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/squirtle/images/websiteTitlepng.png",
+                    fullWidth: 1320,
+                    fullHeight: 380,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__oPwq)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"300px"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/website_starter/images/squirtieSurfinggif.gif",
+                    fullWidth: 550,
+                    fullHeight: 440,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__qbxhl
+                  )}
+                  component={Link}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["updateDialogOpen"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["dialog", "open"]
+                            },
+                            operation: 4
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            const oldValue = $stateGet(objRoot, variablePath);
+                            $stateSet(objRoot, variablePath, !oldValue);
+                            return !oldValue;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateDialogOpen"] != null &&
+                      typeof $steps["updateDialogOpen"] === "object" &&
+                      typeof $steps["updateDialogOpen"].then === "function"
+                    ) {
+                      $steps["updateDialogOpen"] = await $steps[
+                        "updateDialogOpen"
+                      ];
+                    }
+                  }}
+                  platform={"nextjs"}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__vl0Hc
+                    )}
+                  >
+                    {"Press Enter To Continue"}
+                  </div>
+                </PlasmicLink__>
+              </Stack__>
+            }
+            className={classNames("__wab_instance", sty.dialog)}
+            noTrigger={true}
+            onOpenChange={generateStateOnChangeProp($state, ["dialog", "open"])}
+            open={generateStateValueProp($state, ["dialog", "open"])}
+          />
+
           <PlasmicHead
             data-plasmic-name={"pageMetadataOverride"}
             data-plasmic-override={overrides.pageMetadataOverride}
@@ -858,116 +969,6 @@ function PlasmicHomepage__RenderFunc(props: {
               }
             />
           </section>
-          <Dialog
-            data-plasmic-name={"dialog"}
-            data-plasmic-override={overrides.dialog}
-            body={
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__qEiOr)}
-              >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img___0YnYr)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"400px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/squirtle/images/websiteTitlepng.png",
-                    fullWidth: 1320,
-                    fullHeight: 380,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__oPwq)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"300px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/website_starter/images/squirtieSurfinggif.gif",
-                    fullWidth: 550,
-                    fullHeight: 440,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__qbxhl
-                  )}
-                  component={Link}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["updateDialogOpen"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["dialog", "open"]
-                            },
-                            operation: 4
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            const oldValue = $stateGet(objRoot, variablePath);
-                            $stateSet(objRoot, variablePath, !oldValue);
-                            return !oldValue;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateDialogOpen"] != null &&
-                      typeof $steps["updateDialogOpen"] === "object" &&
-                      typeof $steps["updateDialogOpen"].then === "function"
-                    ) {
-                      $steps["updateDialogOpen"] = await $steps[
-                        "updateDialogOpen"
-                      ];
-                    }
-                  }}
-                  platform={"nextjs"}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__vl0Hc
-                    )}
-                  >
-                    {"Press Enter To Continue"}
-                  </div>
-                </PlasmicLink__>
-              </Stack__>
-            }
-            className={classNames("__wab_instance", sty.dialog)}
-            noTrigger={true}
-            onOpenChange={generateStateOnChangeProp($state, ["dialog", "open"])}
-            open={generateStateValueProp($state, ["dialog", "open"])}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -977,6 +978,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "dialog",
     "pageMetadataOverride",
     "navbar",
     "hero",
@@ -986,9 +988,9 @@ const PlasmicDescendants = {
     "columns",
     "h3",
     "section",
-    "embedHtml",
-    "dialog"
+    "embedHtml"
   ],
+  dialog: ["dialog"],
   pageMetadataOverride: ["pageMetadataOverride"],
   navbar: ["navbar"],
   hero: ["hero", "scrollParallax"],
@@ -998,14 +1000,14 @@ const PlasmicDescendants = {
   columns: ["columns", "h3"],
   h3: ["h3"],
   section: ["section", "embedHtml"],
-  embedHtml: ["embedHtml"],
-  dialog: ["dialog"]
+  embedHtml: ["embedHtml"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  dialog: typeof Dialog;
   pageMetadataOverride: typeof PlasmicHead;
   navbar: "div";
   hero: "section";
@@ -1016,7 +1018,6 @@ type NodeDefaultElementType = {
   h3: "h3";
   section: "section";
   embedHtml: typeof Embed;
-  dialog: typeof Dialog;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1079,6 +1080,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    dialog: makeNodeComponent("dialog"),
     pageMetadataOverride: makeNodeComponent("pageMetadataOverride"),
     navbar: makeNodeComponent("navbar"),
     hero: makeNodeComponent("hero"),
@@ -1089,7 +1091,6 @@ export const PlasmicHomepage = Object.assign(
     h3: makeNodeComponent("h3"),
     section: makeNodeComponent("section"),
     embedHtml: makeNodeComponent("embedHtml"),
-    dialog: makeNodeComponent("dialog"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
