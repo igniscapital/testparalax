@@ -283,7 +283,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__vl0Hc
                     )}
                   >
-                    {"Press Enter To Continue"}
+                    {"click Here to continue"}
                   </div>
                 </PlasmicLink__>
               </Stack__>
@@ -404,23 +404,25 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames("__wab_instance", sty.scrollParallax)}
               speed={100}
             >
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__zb4JB)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/website_starter/images/squirtieMainbannerSunpng.png",
-                  fullWidth: 1920,
-                  fullHeight: 1080,
-                  aspectRatio: undefined
-                }}
-              />
+              <div className={classNames(projectcss.all, sty.freeBox__fxlEd)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__zb4JB)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/website_starter/images/squirtieMainbannerSunpng.png",
+                    fullWidth: 1920,
+                    fullHeight: 1080,
+                    aspectRatio: undefined
+                  }}
+                />
+              </div>
             </ParallaxWrapper>
             <PlasmicImg__
               alt={""}
@@ -891,7 +893,9 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.embedHtml}
               className={classNames("__wab_instance", sty.embedHtml)}
               code={
-                '<audio controls autoplay>\n  <source src="https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3" type="audio/mpeg">\n</audio>'
+                "<audio controls autoplay><source src='" +
+                "https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3" +
+                "' type='audio/mpeg'></audio>"
               }
             />
 
