@@ -141,7 +141,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "dialog.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -549,7 +549,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"100%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/squirtle/images/websiteWreckage1Gif4.gif",
+                    src: "/plasmic/squirtle/images/websiteWreckage11Gif.gif",
                     fullWidth: 1920,
                     fullHeight: 1068,
                     aspectRatio: undefined
@@ -576,7 +576,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"100%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/squirtle/images/websiteWreckage2Gif3.gif",
+                    src: "/plasmic/squirtle/images/websiteWreckage21Gif.gif",
                     fullWidth: 1920,
                     fullHeight: 1068,
                     aspectRatio: undefined
@@ -603,7 +603,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"100%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/squirtle/images/websiteWreckage3Gif3.gif",
+                    src: "/plasmic/squirtle/images/websiteWreckage31Gif.gif",
                     fullWidth: 1920,
                     fullHeight: 1068,
                     aspectRatio: undefined
@@ -624,7 +624,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"100%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/squirtle/images/websiteWreckage41Gif.gif",
+                    src: "/plasmic/squirtle/images/websiteWreckage42Gif.gif",
                     fullWidth: 1920,
                     fullHeight: 1068,
                     aspectRatio: undefined
@@ -987,7 +987,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "0% Tax.\n50% LP\n50%Distribution/development\nCONTRACT ADDRESS :"
+                      "50% LP\n50% Distribution/development\n0% TAX \nCONTRACT ADDRESS :"
                     }
                   </h3>
                 </Stack__>
@@ -1012,7 +1012,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/squirtle/images/websiteRoadmap1Png.png",
+                  src: "/plasmic/squirtle/images/websiteRoadmap2Png.png",
                   fullWidth: 1920,
                   fullHeight: 1216,
                   aspectRatio: undefined
