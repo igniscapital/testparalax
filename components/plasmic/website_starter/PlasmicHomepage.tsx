@@ -92,6 +92,7 @@ export type PlasmicHomepage__OverridesType = {
   dialog?: Flex__<typeof Dialog>;
   pageMetadataOverride?: Flex__<typeof PlasmicHead>;
   navbar?: Flex__<"div">;
+  button?: Flex__<"button">;
   hero?: Flex__<"section">;
   lore?: Flex__<"section">;
   tokenomics?: Flex__<"section">;
@@ -411,13 +412,14 @@ function PlasmicHomepage__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__riCgg)}
             >
-              <PlasmicLink__
+              <button
+                data-plasmic-name={"button"}
+                data-plasmic-override={overrides.button}
                 className={classNames(
                   projectcss.all,
-                  projectcss.a,
-                  sty.link__jEd0C
+                  projectcss.button,
+                  sty.button
                 )}
-                component={Link}
                 onClick={async event => {
                   const $steps = {};
 
@@ -426,11 +428,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           customFunction: async () => {
                             return (() => {
-                              if (audio.paused) {
-                                return audio.play();
-                              } else {
-                                return audio.pause();
-                              }
+                              return document.addEventListener("click", () => {
+                                audio.pause();
+                              });
                             })();
                           }
                         };
@@ -447,7 +447,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     $steps["runCode"] = await $steps["runCode"];
                   }
                 }}
-                platform={"nextjs"}
               >
                 <PlasmicImg__
                   alt={""}
@@ -470,7 +469,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     aspectRatio: undefined
                   }}
                 />
-              </PlasmicLink__>
+              </button>
               <PlasmicLink__
                 className={classNames(
                   projectcss.all,
@@ -1198,6 +1197,7 @@ const PlasmicDescendants = {
     "dialog",
     "pageMetadataOverride",
     "navbar",
+    "button",
     "hero",
     "lore",
     "tokenomics",
@@ -1208,7 +1208,8 @@ const PlasmicDescendants = {
   ],
   dialog: ["dialog"],
   pageMetadataOverride: ["pageMetadataOverride"],
-  navbar: ["navbar"],
+  navbar: ["navbar", "button"],
+  button: ["button"],
   hero: ["hero"],
   lore: ["lore"],
   tokenomics: ["tokenomics", "columns", "h3"],
@@ -1225,6 +1226,7 @@ type NodeDefaultElementType = {
   dialog: typeof Dialog;
   pageMetadataOverride: typeof PlasmicHead;
   navbar: "div";
+  button: "button";
   hero: "section";
   lore: "section";
   tokenomics: "section";
@@ -1297,6 +1299,7 @@ export const PlasmicHomepage = Object.assign(
     dialog: makeNodeComponent("dialog"),
     pageMetadataOverride: makeNodeComponent("pageMetadataOverride"),
     navbar: makeNodeComponent("navbar"),
+    button: makeNodeComponent("button"),
     hero: makeNodeComponent("hero"),
     lore: makeNodeComponent("lore"),
     tokenomics: makeNodeComponent("tokenomics"),

@@ -322,8 +322,10 @@
     align-items: center;
   }
 }
-.link__jEd0C {
+.button {
   display: flex;
+  border-width: 1px;
+  border-style: none;
 }
 .img__fMyB {
   position: relative;
