@@ -418,7 +418,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__jEd0C
                 )}
                 component={Link}
-                href={""}
+                href={"#"}
                 onClick={async event => {
                   const $steps = {};
 
