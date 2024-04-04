@@ -324,7 +324,7 @@ function PlasmicHomepage__RenderFunc(props: {
           <Embed
             className={classNames("__wab_instance", sty.embedHtml__wMnbl)}
             code={
-              "<script>\nconst audio = new Audio('https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3');\n</script>"
+              "<script>\nconst audio = new Audio('https://site-assets.plasmic.app/ae7c6b4324e4b47aca13a5edd179731f.mp3');\n</script>"
             }
           />
 
