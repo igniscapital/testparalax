@@ -109,6 +109,11 @@
           "id": "SGHhp3IATlZa",
           "name": "IconIcon",
           "moduleFilePath": "plasmic/squirtle/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "Y-CdrZAMhvBS",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/squirtle/icons/PlasmicIcon__Icon2.tsx"
         }
       ],
       "images": [
@@ -311,6 +316,16 @@
           "id": "Czxst6qBps3S",
           "name": "website_wreckage4 (2).gif",
           "filePath": "../public/plasmic/squirtle/images/websiteWreckage42Gif.gif"
+        },
+        {
+          "id": "GINCn0BXhq0l",
+          "name": "mute.png",
+          "filePath": "../public/plasmic/squirtle/images/mutepng.png"
+        },
+        {
+          "id": "Inxe2aBjMNOz",
+          "name": "mute.png 2",
+          "filePath": "../public/plasmic/squirtle/images/mutepng2.png"
         }
       ],
       "indirect": false,

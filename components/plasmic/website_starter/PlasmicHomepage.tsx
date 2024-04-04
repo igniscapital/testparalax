@@ -61,10 +61,10 @@ import {
 
 import Dialog from "../../Dialog"; // plasmic-import: 1DFDKTDshbFk/component
 import Button from "../../Button"; // plasmic-import: d_zUYhXcO1JF/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { PlasmicHead } from "@plasmicapp/react-web";
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 
 import { useScreenVariants as useScreenVariantsr2Vs3DyXq1BQ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: r2VS3DyXq1bQ/globalVariant
 
@@ -98,7 +98,6 @@ export type PlasmicHomepage__OverridesType = {
   columns?: Flex__<"div">;
   h3?: Flex__<"h3">;
   section?: Flex__<"section">;
-  embedHtml?: Flex__<typeof Embed>;
   h5?: Flex__<"h5">;
 };
 
@@ -281,9 +280,6 @@ function PlasmicHomepage__RenderFunc(props: {
                                 return document.addEventListener(
                                   "click",
                                   () => {
-                                    const audio = new Audio(
-                                      "https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3"
-                                    );
                                     audio.play();
                                   }
                                 );
@@ -323,6 +319,13 @@ function PlasmicHomepage__RenderFunc(props: {
             noTrigger={true}
             onOpenChange={generateStateOnChangeProp($state, ["dialog", "open"])}
             open={generateStateValueProp($state, ["dialog", "open"])}
+          />
+
+          <Embed
+            className={classNames("__wab_instance", sty.embedHtml__wMnbl)}
+            code={
+              "<script>\nconst audio = new Audio('https://site-assets.plasmic.app/6908967f716812157cca3c309b50562b.mp3');\n</script>"
+            }
           />
 
           <PlasmicHead
@@ -415,11 +418,77 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__jEd0C
                 )}
                 component={Link}
+                href={
+                  "https://x.com/squirtiebase?s=21&t=l4jzQjAGJyHp0hSM4Zy0Zg"
+                }
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["runCode"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          customFunction: async () => {
+                            return (() => {
+                              if (audio.paused) {
+                                return audio.play();
+                              } else {
+                                return audio.pause();
+                              }
+                            })();
+                          }
+                        };
+                        return (({ customFunction }) => {
+                          return customFunction();
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["runCode"] != null &&
+                    typeof $steps["runCode"] === "object" &&
+                    typeof $steps["runCode"].then === "function"
+                  ) {
+                    $steps["runCode"] = await $steps["runCode"];
+                  }
+                }}
                 platform={"nextjs"}
               >
                 <PlasmicImg__
                   alt={""}
-                  className={classNames(sty.img___3IEiV)}
+                  className={classNames(sty.img__fMyB)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "24px"
+                      : "72px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/squirtle/images/mutepng2.png",
+                    fullWidth: 144,
+                    fullHeight: 104,
+                    aspectRatio: undefined
+                  }}
+                />
+              </PlasmicLink__>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__y0DxX
+                )}
+                component={Link}
+                href={
+                  "https://x.com/squirtiebase?s=21&t=l4jzQjAGJyHp0hSM4Zy0Zg"
+                }
+                platform={"nextjs"}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__sUNg3)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"100%"}
@@ -446,6 +515,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__vf9EL
                 )}
                 component={Link}
+                href={"https://t.me/squirtiebase"}
                 platform={"nextjs"}
               >
                 <PlasmicImg__
@@ -1030,9 +1100,7 @@ function PlasmicHomepage__RenderFunc(props: {
               />
             </div>
             <Embed
-              data-plasmic-name={"embedHtml"}
-              data-plasmic-override={overrides.embedHtml}
-              className={classNames("__wab_instance", sty.embedHtml)}
+              className={classNames("__wab_instance", sty.embedHtml___2BGsm)}
               code={""}
             />
 
@@ -1060,6 +1128,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__g9BI
                 )}
                 component={Link}
+                href={
+                  "https://x.com/squirtiebase?s=21&t=l4jzQjAGJyHp0hSM4Zy0Zg"
+                }
                 platform={"nextjs"}
               >
                 <PlasmicImg__
@@ -1091,6 +1162,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__nsoCb
                 )}
                 component={Link}
+                href={"https://t.me/squirtiebase"}
                 platform={"nextjs"}
               >
                 <PlasmicImg__
@@ -1135,7 +1207,6 @@ const PlasmicDescendants = {
     "columns",
     "h3",
     "section",
-    "embedHtml",
     "h5"
   ],
   dialog: ["dialog"],
@@ -1146,8 +1217,7 @@ const PlasmicDescendants = {
   tokenomics: ["tokenomics", "columns", "h3"],
   columns: ["columns", "h3"],
   h3: ["h3"],
-  section: ["section", "embedHtml", "h5"],
-  embedHtml: ["embedHtml"],
+  section: ["section", "h5"],
   h5: ["h5"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1164,7 +1234,6 @@ type NodeDefaultElementType = {
   columns: "div";
   h3: "h3";
   section: "section";
-  embedHtml: typeof Embed;
   h5: "h5";
 };
 
@@ -1237,7 +1306,6 @@ export const PlasmicHomepage = Object.assign(
     columns: makeNodeComponent("columns"),
     h3: makeNodeComponent("h3"),
     section: makeNodeComponent("section"),
-    embedHtml: makeNodeComponent("embedHtml"),
     h5: makeNodeComponent("h5"),
 
     // Metadata about props expected for PlasmicHomepage

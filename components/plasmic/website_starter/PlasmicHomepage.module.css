@@ -133,6 +133,11 @@
     text-align: center;
   }
 }
+.embedHtml__wMnbl:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
 .pageMetadataOverride:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
@@ -320,17 +325,36 @@
 .link__jEd0C {
   display: flex;
 }
-.img___3IEiV {
+.img__fMyB {
+  position: relative;
   object-fit: cover;
   max-width: 100%;
   width: 72px;
   flex-shrink: 0;
 }
-.img___3IEiV > picture > img {
+.img__fMyB > picture > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .img___3IEiV {
+  .img__fMyB {
+    width: 24px;
+    flex-shrink: 0;
+  }
+}
+.link__y0DxX {
+  display: flex;
+}
+.img__sUNg3 {
+  object-fit: cover;
+  max-width: 100%;
+  width: 72px;
+  flex-shrink: 0;
+}
+.img__sUNg3 > picture > img {
+  object-fit: cover;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__sUNg3 {
     width: 24px;
     flex-shrink: 0;
   }
@@ -1381,7 +1405,7 @@
 .img__eGvGc > picture > img {
   object-fit: cover;
 }
-.embedHtml:global(.__wab_instance) {
+.embedHtml___2BGsm:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   position: relative;
