@@ -418,9 +418,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__jEd0C
                 )}
                 component={Link}
-                href={
-                  "https://x.com/squirtiebase?s=21&t=l4jzQjAGJyHp0hSM4Zy0Zg"
-                }
+                href={""}
                 onClick={async event => {
                   const $steps = {};
 
