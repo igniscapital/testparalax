@@ -429,7 +429,15 @@ function PlasmicHomepage__RenderFunc(props: {
                           customFunction: async () => {
                             return (() => {
                               return document.addEventListener("click", () => {
-                                audio.pause();
+                                if (
+                                  audio.paused &&
+                                  audio.currentTime > 0 &&
+                                  !audio.ended
+                                ) {
+                                  audio.play();
+                                } else {
+                                  audio.pause();
+                                }
                               });
                             })();
                           }
