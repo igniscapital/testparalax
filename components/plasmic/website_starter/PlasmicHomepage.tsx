@@ -343,6 +343,8 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.navbar}
             className={classNames(projectcss.all, sty.navbar)}
           >
+            <div className={classNames(projectcss.all, sty.freeBox__sEeBw)} />
+
             <Stack__
               as={"div"}
               hasGap={true}
@@ -399,6 +401,74 @@ function PlasmicHomepage__RenderFunc(props: {
                 platform={"nextjs"}
               >
                 {"Roadmap"}
+              </PlasmicLink__>
+            </Stack__>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__riCgg)}
+            >
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__jEd0C
+                )}
+                component={Link}
+                platform={"nextjs"}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img___3IEiV)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "24px"
+                      : "72px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/squirtle/images/websiteTwitterBrownpng.png",
+                    fullWidth: 144,
+                    fullHeight: 104,
+                    aspectRatio: undefined
+                  }}
+                />
+              </PlasmicLink__>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__vf9EL
+                )}
+                component={Link}
+                platform={"nextjs"}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__yJf1Q)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "24px"
+                      : "72px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/squirtle/images/websiteTelegramBrownpng.png",
+                    fullWidth: 144,
+                    fullHeight: 104,
+                    aspectRatio: undefined
+                  }}
+                />
               </PlasmicLink__>
             </Stack__>
           </div>
@@ -878,66 +948,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.columns)}
               >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.column__qpion)}
-                >
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__zgrrc
-                    )}
-                    component={Link}
-                    platform={"nextjs"}
-                  >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img___3HO8X)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"72px"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/squirtle/images/websiteTwitterBrownpng.png",
-                        fullWidth: 144,
-                        fullHeight: 104,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </PlasmicLink__>
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__gzsYz
-                    )}
-                    component={Link}
-                    platform={"nextjs"}
-                  >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__pd0Ga)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"72px"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/squirtle/images/websiteTelegramBrownpng.png",
-                        fullWidth: 144,
-                        fullHeight: 104,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </PlasmicLink__>
-                </Stack__>
                 <div className={classNames(projectcss.all, sty.column__jyjtu)}>
                   <PlasmicImg__
                     alt={""}
@@ -950,7 +960,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? "200px"
-                        : "auto"
+                        : "250px"
                     }
                     loading={"lazy"}
                     src={{
@@ -1038,6 +1048,74 @@ function PlasmicHomepage__RenderFunc(props: {
             >
               {"Copyright @ 2024, all rights reserved."}
             </h5>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___7R9C)}
+            >
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__g9BI
+                )}
+                component={Link}
+                platform={"nextjs"}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__wZoDj)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "24px"
+                      : "32px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/squirtle/images/websiteTwitterBrownpng.png",
+                    fullWidth: 144,
+                    fullHeight: 104,
+                    aspectRatio: undefined
+                  }}
+                />
+              </PlasmicLink__>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__nsoCb
+                )}
+                component={Link}
+                platform={"nextjs"}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__ymptP)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "24px"
+                      : "32px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/squirtle/images/websiteTelegramBrownpng.png",
+                    fullWidth: 144,
+                    fullHeight: 104,
+                    aspectRatio: undefined
+                  }}
+                />
+              </PlasmicLink__>
+            </Stack__>
           </section>
         </div>
       </div>
