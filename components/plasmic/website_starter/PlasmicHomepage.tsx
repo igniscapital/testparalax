@@ -97,7 +97,6 @@ export type PlasmicHomepage__OverridesType = {
   lore?: Flex__<"section">;
   tokenomics?: Flex__<"section">;
   columns?: Flex__<"div">;
-  h3?: Flex__<"h3">;
   section?: Flex__<"section">;
   h5?: Flex__<"h5">;
 };
@@ -1050,24 +1049,36 @@ function PlasmicHomepage__RenderFunc(props: {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.column__wPfox)}
                 >
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__s4FoI
-                    )}
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___0Y7F0)}
                   >
-                    {"1,000,000,000 "}
-                  </h2>
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__bEsjv
+                      )}
+                    >
+                      {"Token Supply"}
+                    </h3>
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__jxHt
+                      )}
+                    >
+                      {"1,000,000,000"}
+                    </h2>
+                  </div>
                   <h3
-                    data-plasmic-name={"h3"}
-                    data-plasmic-override={overrides.h3}
                     className={classNames(
                       projectcss.all,
                       projectcss.h3,
                       projectcss.__wab_text,
-                      sty.h3
+                      sty.h3__mvWu8
                     )}
                   >
                     {
@@ -1210,7 +1221,6 @@ const PlasmicDescendants = {
     "lore",
     "tokenomics",
     "columns",
-    "h3",
     "section",
     "h5"
   ],
@@ -1220,9 +1230,8 @@ const PlasmicDescendants = {
   button: ["button"],
   hero: ["hero"],
   lore: ["lore"],
-  tokenomics: ["tokenomics", "columns", "h3"],
-  columns: ["columns", "h3"],
-  h3: ["h3"],
+  tokenomics: ["tokenomics", "columns"],
+  columns: ["columns"],
   section: ["section", "h5"],
   h5: ["h5"]
 } as const;
@@ -1239,7 +1248,6 @@ type NodeDefaultElementType = {
   lore: "section";
   tokenomics: "section";
   columns: "div";
-  h3: "h3";
   section: "section";
   h5: "h5";
 };
@@ -1312,7 +1320,6 @@ export const PlasmicHomepage = Object.assign(
     lore: makeNodeComponent("lore"),
     tokenomics: makeNodeComponent("tokenomics"),
     columns: makeNodeComponent("columns"),
-    h3: makeNodeComponent("h3"),
     section: makeNodeComponent("section"),
     h5: makeNodeComponent("h5"),
 
