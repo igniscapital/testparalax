@@ -140,7 +140,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "dialog.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -1082,7 +1082,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "50% LP\n50% Distribution/development\n0% TAX \nCONTRACT ADDRESS :"
+                      "50% LP\n50% Distribution/development\n0% TAX \nCA : 0x0AE8e57E504A4DcBf9E8E925c87\nB03512b764347"
                     }
                   </h3>
                 </Stack__>
