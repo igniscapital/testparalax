@@ -943,7 +943,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "But as the tides of destiny shifted, Squirtie felt a new calling stirring within his heart. Hearing the cries of memelovers across the Blockchain, who were falling victim to rug pulls and scams, Squirtie knew that his journey was far from over. With a heavy heart and a determined spirit, Squirtie bid farewell to his beloved Squad and set out on a new quest."
+                          "Now, Squirtie roams the digital expanse of the BASE Blockchain, his shell gleaming with purpose as he seeks to lead the charge against fraud and deception. With every scam uncovered and every rug pull thwarted, Squirtie restores a glimmer of hope to memelovers seeking to ride the waves of real gains. Join us on this noble quest as Squirtie stands as the Guardian of the BASE Blockchain, championing honesty and fair play for all!"
                         }
                       </div>
                       <PlasmicImg__
